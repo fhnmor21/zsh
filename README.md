@@ -15,5 +15,5 @@
 
 - add the following to your x startup
 ```
-``` xcape -e 'Caps_Lock=Escape; Shift_R=space' ```
+``` xcape -e 'Caps_Lock=Escape;Shift_R=space' ```
 ```
