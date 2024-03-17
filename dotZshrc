@@ -8,6 +8,6 @@ plug "zsh-users/zsh-syntax-highlighting"
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
-
+export STARSHIP_CONFIG=~/.config/.starship.toml
 eval "$(starship init zsh)"
 source ${HOME}/.config/zsh/aliases

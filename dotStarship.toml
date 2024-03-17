@@ -1,0 +1,60 @@
+format = """
+╭─[  ](bg:#303030 fg:#c7c7c7)\
+$username\
+[](bg:#303030 fg:#707070)\
+$directory\
+$git_branch\
+$git_status\
+[](#303030)\
+\n╰─$character
+"""
+
+[character]
+error_symbol = "[✘](bold fg:#ff5555  bg:#303030)"
+success_symbol = "[❯](bold fg:#50fa7b  bg:#303030)"
+
+[cmd_duration]
+style = "bold fg:#f1fa8c  bg:#303030"
+min_time = 1
+format = '[ took [$duration](bold fg:#909090 bg:#303030)  ]($style)'
+
+[directory]
+style = "bold fg:#50fa7b  bg:#303030"
+format = "[  $path ]($style)"
+truncation_length = 9
+truncation_symbol = "~/…/"
+truncate_to_repo = true
+home_symbol = '~'
+
+[git_branch]
+style = "bold fg:#ff79c6  bg:#303030"
+format = '[](fg:#707070 bg:#303030)[  ](fg:#D6D5CB bg:#303030)[](fg:#FFC0CB bg:#303030)[ $branch ](bold $style)'
+truncation_length = 15
+
+[git_status]
+style = "bold fg:#ff5555  bg:#303030"
+conflicted = "~"
+up_to_date = " "
+untracked = "?"
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+stashed = "*"
+modified = " "
+staged = '[++\($count\)](fg:#56b60a bg:#303030)'
+renamed = " "
+deleted = " "
+format = '[$all_status$ahead_behind ]($style)'
+
+
+[hostname]
+style = "bold fg:#bd93f9  bg:#303030"
+ssh_only = false
+format = '[@$hostname ]($style)'
+disabled = false
+
+[username]
+show_always = true
+format = "[$user]($style)"
+style_user = "bold fg:#8be9fd  bg:#303030"
+disabled = false
