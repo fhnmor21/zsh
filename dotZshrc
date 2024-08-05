@@ -5,6 +5,11 @@ plug "zap-zsh/supercharge"
 #plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
 
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
