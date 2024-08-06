@@ -11,7 +11,7 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
-bbindkey "^[[3~" delete-char
+bindkey "^[[3~" delete-char
 
 # Load and initialise completion system
 autoload -Uz compinit
